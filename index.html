@@ -487,6 +487,49 @@
           grid-template-columns: 1fr;
         }
       }
+
+      /* Mobile-specific adjustments for phones */
+      @media (max-width: 600px) {
+        body { font-size: 15px; }
+
+        .hero { min-height: auto; padding: 1rem; }
+        .hero-card { margin: 1rem auto 0; padding: 1rem; min-height: auto; margin-bottom: 3rem; }
+
+        .hero-image {
+          position: static;
+          left: auto;
+          top: auto;
+          width: 100%;
+          max-width: none;
+          height: 200px;
+          border-radius: 14px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+          margin-top: 0.8rem;
+        }
+
+        .hero-image img { object-fit: cover; object-position: center; height: 100%; }
+
+        .pill { padding: 0.45rem 0.6rem; font-size: 0.95rem; }
+
+        .card, .schedule-card, .announcement-slot { padding: 0.9rem; }
+
+        .leaders { gap: 0.8rem; }
+        .leader img { max-height: 200px; border-radius: 12px; }
+
+        .schedule-grid { grid-template-columns: 1fr; }
+
+        .tabs { justify-content: center; margin-bottom: 0.6rem; }
+        .tabs .tab { padding: 0.55rem 0.9rem; font-size: 0.95rem; }
+
+        .fb-embed { height: 420px; }
+
+        footer { flex-direction: column; gap: 0.6rem; padding-bottom: 1.5rem; }
+
+        .parish-office { flex-direction: column; align-items: flex-start; }
+        .parish-office img { width: 100%; max-width: none; height: auto; }
+
+        .audio-control { right: 0.8rem; bottom: 4.6rem; }
+      }
     </style>
   </head>
   <body>
@@ -693,7 +736,7 @@
             <p class="tiny">Spiritual leader of the parish community</p>
           </div>
           <div class="leader">
-            <img class="youth" src="file:///C:/Users/ICP%20SOCCOM/Downloads/11657ed8-1a23-4549-a225-04efa991ab42.jpg" alt="Brother Ronlee L. Macelliones">
+            <img class="youth" src="11657ed8-1a23-4549-a225-04efa991ab42.jpg" alt="Brother Ronlee L. Macelliones">
             <h3>Youth Coordinator</h3>
             <p>Brother Ronlee L. Macelliones</p>
             <p class="tiny">Works with youth ministry and formation activities</p>
