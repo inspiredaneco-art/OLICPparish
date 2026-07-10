@@ -71,7 +71,18 @@
 
       .updates-panel { display: none; margin: 0 auto; max-width: 900px; }
       .updates-panel.active { display: block; }
-      .fb-embed { width: 100%; border: none; overflow: hidden; }
+      .fb-wrap {
+        width: 100%;
+        max-width: 820px;
+        margin: 0 auto;
+        /* default desktop aspect */
+        aspect-ratio: 16/9;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+
+      .fb-embed { width: 100%; height: 100%; border: none; display: block; }
 
       /* Audio controls */
       .audio-control {
@@ -276,6 +287,15 @@
         object-fit: cover;
         display: block;
         margin-bottom: 1rem;
+      }
+
+      /* Ensure coordinator image scales without cutting head on narrow screens */
+      .leader img.youth {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center 20%;
       }
 
       .leader img.youth {
@@ -521,7 +541,8 @@
         .tabs { justify-content: center; margin-bottom: 0.6rem; }
         .tabs .tab { padding: 0.55rem 0.9rem; font-size: 0.95rem; }
 
-        .fb-embed { height: 420px; }
+        .fb-wrap { aspect-ratio: 4/3; }
+        .fb-embed { height: 100%; }
 
         footer { flex-direction: column; gap: 0.6rem; padding-bottom: 1.5rem; }
 
@@ -558,7 +579,9 @@
           <h3 style="margin-top:0; color: #fff3c4;">Latest Updates</h3>
           <p style="color:#fff3c4; margin:0 0 1rem;">Latest Facebook post from the parish page (opens inline).</p>
           <div style="max-width:820px; margin:0 auto;">
-            <iframe class="fb-embed" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CjacjpMPm%2F&show_text=true&width=500" width="100%" height="600" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <div class="fb-wrap">
+              <iframe class="fb-embed" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61578971889909&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="100%" height="100%" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -661,8 +684,8 @@
             Check out our latest parish update and share it on Facebook to help spread the word.
             Click the button below to open the featured post.
           </p>
-          <a class="highlight-link" href="https://www.facebook.com/share/p/1EQAmS48tM/" target="_blank" rel="noopener noreferrer">
-            View Featured Facebook Post
+          <a class="highlight-link" href="https://www.facebook.com/profile.php?id=61578971889909" target="_blank" rel="noopener noreferrer">
+            Visit Our Facebook Page
           </a>
           <p class="tiny">This is a highlighted parish post for the community. Update the highlight as needed.</p>
         </div>
