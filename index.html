@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Lady of the Immaculate Conception Parish</title>
+    <link rel="icon" type="image/jpeg" href="https://scontent.fmnl3-3.fna.fbcdn.net/v/t39.30808-6/709771306_122160024482965729_5580826793801227153_n.jpg?stp=dst-jpg_tt6&cstp=mx1366x2048&ctp=s1366x2048&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3sWVBFZCyDnITsZ6A107gnCHm_0ovx2WcIeb_Si_HZUKAgcmco7Rgv57rcEteKLudc7iPTCfDV5tqATtzNjMW&_nc_ohc=rYgsgO-yIPcQ7kNvwGBH1OW&_nc_oc=Ado4sLeT6-Pl2MAkoloDT25mLYzQVYEZVyvLNNMTUhmYHknhPgjiJW3-AflYAdqNNBw&_nc_zt=23&_nc_ht=scontent.fmnl3-3.fna&_nc_gid=ABnteiMeZlo_78SKsHlyUw&_nc_ss=7b2a8&oh=00_AQBOMveRSaUpeQb4oWAcLtj8cqd95KrpZYF2jCs6mc3auw&oe=6A562137" />
     <style>
       :root {
         --maroon: #7a0f1d;
@@ -81,7 +82,7 @@
         margin: 0 auto;
         /* default desktop aspect (wider and taller for visibility) */
         aspect-ratio: 16/9;
-        min-height: 520px;
+        min-height: 620px;
         background: #fff;
         overflow: hidden;
         border-radius: 12px;
@@ -530,8 +531,10 @@
           border-radius: 14px;
           box-shadow: 0 8px 20px rgba(0,0,0,0.12);
           margin-top: 0.8rem;
+          background: transparent;
         }
 
+        .hero-image::before { display: none; }
         .hero-image img { object-fit: cover; object-position: center; height: 100%; }
 
         .pill { padding: 0.45rem 0.6rem; font-size: 0.95rem; }
