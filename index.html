@@ -633,6 +633,25 @@
         });
       })();
     </script>
+    <script>
+      // Play & loop background audio when user clicks the highlight link (or similar links)
+      (function(){
+        const audio = document.getElementById('bg-audio');
+        if(!audio) return;
+        function startAudio(){
+          try{ audio.muted = false; audio.loop = true; audio.play().catch(()=>{}); }
+          catch(e){}
+          const control = document.getElementById('audio-control');
+          const toggle = document.getElementById('audio-toggle');
+          if(control){ control.style.display = 'flex'; control.setAttribute('aria-hidden','false'); }
+          if(toggle){ toggle.textContent = audio.paused ? 'Play' : 'Pause'; }
+        }
+
+        document.querySelectorAll('a.highlight-link, a[href*="facebook.com"]').forEach(a => {
+          a.addEventListener('click', function(){ startAudio(); });
+        });
+      })();
+    </script>
 
     <main>
       <section class="panel">
